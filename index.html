@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <title>WW</title>
+</head>
+<body>
+    <script src="./dist/main.js"></script>
+    <!-- <script src="./dist/getWallet.js"></script> -->
+    <div class="container"><button onClick="passData()">Get Wallet ID</button></div>
+    <div class="container"><span id="walletId">your wallet address here</span></div>
+    <div class="container"><iframe src="https://playcanv.as/e/p/4GaPwa9s/" id="iframe"></iframe></div>
+    <script>
+        var walletAddress;
+        window.cardano.enable();
+        setTimeout(function () {
+            // window.wallet_address
+            // walletAddress = "!@#$!@#$!@#$!@#$ASD!QWEACZXC";
+            walletAddress = window.wallet_address;
+            document.getElementById("walletId").innerHTML = walletAddress;
+        }, 1000);
+
+        function passData() {
+            if(walletAddress != null) {
+                console.log("not null : " + walletAddress);
+                var iframe = document.getElementById("iframe");
+                iframe.contentWindow.postMessage({
+                score: walletAddress,
+                }, "https://playcanv.as");
+            } else {
+                console.log("null");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
