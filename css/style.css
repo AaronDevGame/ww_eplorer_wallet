@@ -1,0 +1,40 @@
+
+
+html {
+    /* background-color: black; */
+    /* background-image: linear-gradient(rgb(43, 0, 0), rgb(0, 0, 0)); */
+
+    /* background-image: linear-gradient(to bottom right, red, yellow); */
+
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cbccc8)) fixed; */
+
+    /* background: -webkit-gradient(to bottom right, red, yellow);
+    
+    */
+
+    /* background: linear-gradient(45deg, red 0 50%, blue 50% 100%); */
+}
+
+body {
+    background: linear-gradient(#3c005c, #457b9d) fixed;
+}
+
+.container {
+
+    /* background-color: yellow; */
+    /* border: 5px solid #FFFF00; */
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    color: white;
+}
+
+iframe {
+    position: absolute; 
+    width: 90%;
+    height: 90%;
+    border: 0;
+}
